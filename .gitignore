@@ -1,0 +1,8 @@
+# Esto es para eleminar cualquier cosa de las demas maquinas de mis compañeros y asi no afecte al proyecto
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Carpetas de dependencias (por si acaso usamos npm o alguna libreria)
+node_modules/

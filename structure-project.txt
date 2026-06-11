@@ -1,0 +1,11 @@
+proyecto-so/
+├── assets/                  # Recursos multimedia estáticos
+│   ├── img/                 # Imágenes, esquemas de SO
+│   └── icons/               # Favicon, íconos de la interfaz
+├── css/                     # Capa de presentación
+│   └── styles.css           # Hoja de estilos principal (Metodología BEM)
+├── js/                      # Capa de comportamiento y persistencia
+│   └── main.js              # Lógica principal, contador y comentarios
+├── .gitignore               # Exclusiones de control de versiones
+├── index.html               # Capa estructural (HTML5 Semántico)
+└── README.md                # Documentación del proyecto para el equipo y usuarios
