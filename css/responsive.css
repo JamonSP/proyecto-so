@@ -1,0 +1,7 @@
+/* Archivo: css/responsive.css */
+@media (max-width: 768px) {
+    .main-header { flex-direction: column; text-align: center; gap: 1rem; }
+    .grid-container { grid-template-columns: 1fr; }
+    .main-footer { flex-direction: column; text-align: center; }
+    .footer-diagonal-img { display: none; }
+}

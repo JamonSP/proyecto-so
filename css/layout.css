@@ -1,0 +1,55 @@
+/* Archivo: css/layout.css */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    background-color: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    margin-bottom: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: 0 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.comments-section {
+    padding: 3rem 5%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.main-footer {
+    position: relative;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    margin-top: 4rem;
+    display: flex;
+    min-height: 250px;
+    overflow: hidden;
+}
+
+.footer-content {
+    flex: 1;
+    padding: 3rem 5%;
+    z-index: 2;
+}
+
+/* El footer está listo... no tocar o se rompe la alineación diagonal */
+.footer-diagonal-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 50%, rgba(255,255,255,0.1) 50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.team-list ul { list-style: none; margin-top: 1rem; }

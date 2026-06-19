@@ -1,0 +1,103 @@
+/* Archivo: css/animations.css */
+/* odio esto porque no me funciona la animacion aaaaaaaa - ya quedó */
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 0.8s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.clean-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .clean-card:hover {
+    box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.6);
+}
+
+.input-group { margin-bottom: 1.5rem; display: flex; flex-direction: column; }
+.input-group label { margin-bottom: 0.5rem; font-weight: 600; }
+
+.animated-input {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.animated-input:focus {
+    outline: none;
+    border-color: var(--color-primary-light);
+    box-shadow: 0 0 0 3px rgba(0, 80, 158, 0.2);
+    transform: scale(1.01);
+}
+
+.animated-input.error-shake {
+    animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+    border-color: #ff4d4d;
+}
+
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover { background-color: var(--color-primary-light); transform: translateY(-2px); }
+
+/* Switch Theme Premium */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 32px;
+    margin-right: 15px;
+}
+.theme-switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+    position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #87ceeb; /* Light blue for day */
+    transition: .4s cubic-bezier(0.4, 0.0, 0.2, 1);
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+.slider:before {
+    position: absolute; 
+    content: "☀️"; 
+    font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+    height: 24px; width: 24px; left: 4px; bottom: 4px;
+    background-color: #ffffff; 
+    transition: .4s cubic-bezier(0.4, 0.0, 0.2, 1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+input:checked + .slider { 
+    background-color: #1a2a3a; /* Dark night */
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+}
+input:checked + .slider:before { 
+    transform: translateX(32px); 
+    content: "🌙";
+    background-color: #2c2c2c;
+    color: white;
+}
+.slider.round { border-radius: 34px; }
+.slider.round:before { border-radius: 50%; }

@@ -1,0 +1,30 @@
+/* Archivo: css/theme.css */
+:root {
+    --bg-color: #f4f7f6;
+    --text-color: #333333;
+    --heading-color: #00509e; /* Default bright blue for light mode */
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 51, 102, 0.08) 0px 8px 24px;
+    --input-bg: #f9f9f9;
+    --input-border: #cccccc;
+    --footer-bg: var(--color-primary);
+    --footer-text: #ffffff;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --heading-color: #66b2ff; /* Much brighter blue for dark mode readability */
+    --card-bg: #1e1e1e;
+    --card-shadow: rgba(0, 0, 0, 0.4) 0px 8px 24px;
+    --input-bg: #2c2c2c;
+    --input-border: #444444;
+    --footer-bg: #0d1a26;
+    --footer-text: #e0e0e0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}

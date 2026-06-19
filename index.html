@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas Operativos - Arquitectura y Tipos</title>
+    <!-- CSS Estructurado -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/stats-card.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="light-mode">
+    <header class="main-header">
+        <div class="header-content">
+            <h1>Sistemas Operativos</h1>
+            <p>Materia: Organización del Computador</p>
+        </div>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox-theme">
+                <input type="checkbox" id="checkbox-theme" />
+                <span class="slider round"></span>
+            </label>
+            <span id="theme-label">Modo Claro</span>
+        </div>
+    </header>
+
+    <main class="grid-container" id="main-content">
+        <!-- Contenedores y Decoraciones (Orden personalizado) -->
+        
+        <!-- 1. Bongo Cat -->
+        <div class="decorative-img-container fade-in" id="gallery-1"></div>
+        
+        <!-- 2. Introducción -->
+        <article class="clean-card fade-in" id="card-intro"></article>
+        
+        <!-- 3. PC Pixeleada -->
+        <div class="decorative-img-container fade-in" id="gallery-2"></div>
+
+        <!-- 4. Resto del contenido -->
+        <article class="clean-card fade-in" id="card-desktop"></article>
+        <article class="clean-card fade-in" id="card-mobile"></article>
+        <article class="clean-card fade-in" id="card-server"></article>
+        <article class="clean-card fade-in" id="card-resources"></article>
+
+        <!-- Tarjeta Única de Estadísticas y Galería -->
+        <article class="clean-card fade-in unique-stats-card" id="card-stats">
+            <div class="stats-header">
+                <h2>Estadísticas y Medios</h2>
+                <div class="visit-badge">
+                    Visitas totales: <span id="visit-counter">0</span>
+                </div>
+            </div>
+
+            <div class="video-carousel-container">
+                <button class="carousel-btn prev-btn" id="prev-video" aria-label="Video anterior">&#10094;</button>
+
+                <div class="carousel-track-wrapper">
+                    <ul class="carousel-track" id="video-track">
+                        <li class="carousel-slide current-slide">
+                            <div class="creative-video-card">
+                                <div class="video-wrapper">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/fsuroRYmagw?enablejsapi=1"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <p class="video-caption">Sistemas Operativos: ¿Qué son, cómo funcionan y cuáles son sus
+                                    tipos? Explica de forma fácil y visual la base conceptual de un S.O.</p>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="creative-video-card">
+                                <div class="video-wrapper">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/1C8x3nn-u_w?enablejsapi=1"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <p class="video-caption">Características fundamentales, arquitectura y funciones
+                                    principales
+                                    de los sistemas operativos modernos.</p>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="creative-video-card">
+                                <div class="video-wrapper">
+                                    <iframe width="560" height="315"
+                                        src="https://www.youtube.com/embed/CJ-2LjCee00?enablejsapi=1"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <p class="video-caption">Introducción práctica a los entornos informáticos y al rol de
+                                    los
+                                    sistemas operativos en la computación básica.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="carousel-btn next-btn" id="next-video" aria-label="Siguiente video">&#10095;</button>
+            </div>
+            <div class="carousel-nav" id="carousel-nav">
+                <button class="carousel-indicator current-indicator"></button>
+                <button class="carousel-indicator"></button>
+                <button class="carousel-indicator"></button>
+            </div>
+        </article>
+    </main>
+
+    <section class="comments-section">
+        <div class="clean-card fade-in" id="comments-container">
+            <h2>Comentarios y Feedback</h2>
+            <form id="comment-form">
+                <div class="input-group">
+                    <label for="comment-author">Nombre:</label>
+                    <input type="text" id="comment-author" class="animated-input" placeholder="Tu nombre..." required>
+                </div>
+                <div class="input-group">
+                    <label for="comment-text">Comentario:</label>
+                    <textarea id="comment-text" class="animated-input" rows="4" placeholder="Escribe tu comentario..."
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Enviar Comentario</button>
+            </form>
+            <div id="comments-list"></div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-diagonal-img"></div>
+        <div class="footer-content">
+            <h2>Organización del Computador</h2>
+            <div class="team-list">
+                <h3>Equipo de Desarrollo:</h3>
+                <ul>
+                    <li>Krizzia Páez - C.I: 23.952.227</li>
+                    <li>Yeferson Adames - C.I: 31.842.208</li>
+                    <li>Cesar Esaa - C.I: 31.970.284</li>
+                    <li>José Serrano - C.I: 31.481.180</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts Modulares -->
+    <script src="js/content.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/comments.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // esto es para vincular con firebase para una base de datos gratis universal
+        const firebaseConfig = {
+            apiKey: "AIzaSyCLjTLMTsP_LoeGpJJWs0hBMJXkjPin88I",
+            authDomain: "proyecto-sistemas-operat-2494c.firebaseapp.com",
+            projectId: "proyecto-sistemas-operat-2494c",
+            storageBucket: "proyecto-sistemas-operat-2494c.firebasestorage.app",
+            messagingSenderId: "120768411167",
+            appId: "1:120768411167:web:296d2e3db5aa550941c72a"
+        };
+        // Inicializar el firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+</body>
+
+</html>

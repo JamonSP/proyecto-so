@@ -1,0 +1,28 @@
+/* Archivo: css/base.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --font-main: 'Poppins', sans-serif;
+    --color-primary: #003366;
+    --color-primary-light: #00509e;
+    --transition-speed: 0.3s;
+    --border-radius-card: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 { font-weight: 700; margin-bottom: 0.5rem; }
+a { text-decoration: none; color: var(--heading-color); font-weight: 600; transition: color 0.3s; }
+a:hover { color: #ffcc00; text-decoration: underline; }
+
+/* SE ME FUE LA LUZZZZ dejenme guardar rápido por si acaso */
