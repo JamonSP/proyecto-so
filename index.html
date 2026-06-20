@@ -151,17 +151,12 @@
         </div>
     </footer>
 
-    <!-- Scripts Modulares -->
-    <script src="js/content.js"></script>
-    <script src="js/render.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/counter.js"></script>
-    <script src="js/comments.js"></script>
-    <script src="js/carousel.js"></script>
-    <script src="js/main.js"></script>
+    <!-- Firebase SDK (Version 8 compat) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 
     <script>
-        // esto es para vincular con firebase para una base de datos gratis universal
+        // Inicializar el firebase ANTES de los scripts locales
         const firebaseConfig = {
             apiKey: "AIzaSyCLjTLMTsP_LoeGpJJWs0hBMJXkjPin88I",
             authDomain: "proyecto-sistemas-operat-2494c.firebaseapp.com",
@@ -170,9 +165,17 @@
             messagingSenderId: "120768411167",
             appId: "1:120768411167:web:296d2e3db5aa550941c72a"
         };
-        // Inicializar el firebase
         firebase.initializeApp(firebaseConfig);
     </script>
+
+    <!-- Scripts Modulares -->
+    <script src="js/content.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/comments.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 
