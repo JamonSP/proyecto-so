@@ -6,6 +6,11 @@ const CommentsController = {
         this.authorInput = document.getElementById('comment-author');
         this.textInput = document.getElementById('comment-text');
 
+        // Toggle Slider elements
+        this.toggleBtn = document.getElementById('toggle-comments-btn');
+        this.slider = document.getElementById('comments-slider');
+        this.showingForm = true;
+
         // Referencia al nodo de comentarios en Firebase
         this.dbRef = firebase.database().ref('so_lista_comentarios');
 
@@ -18,6 +23,20 @@ const CommentsController = {
             e.preventDefault();
             this.handleSubmission();
         });
+
+        // Toggle Logic
+        if (this.toggleBtn && this.slider) {
+            this.toggleBtn.addEventListener('click', () => {
+                this.showingForm = !this.showingForm;
+                if (this.showingForm) {
+                    this.slider.style.transform = 'translateX(0)';
+                    this.toggleBtn.innerHTML = 'Ver Comentarios &#10095;';
+                } else {
+                    this.slider.style.transform = 'translateX(-50%)';
+                    this.toggleBtn.innerHTML = '&#10094; Escribir Comentario';
+                }
+            });
+        }
     },
 
     sanitize: function (str) {

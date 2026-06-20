@@ -117,21 +117,36 @@
     </main>
 
     <section class="comments-section">
-        <div class="clean-card fade-in" id="comments-container">
-            <h2>Comentarios y Feedback</h2>
-            <form id="comment-form">
-                <div class="input-group">
-                    <label for="comment-author">Nombre:</label>
-                    <input type="text" id="comment-author" class="animated-input" placeholder="Tu nombre..." required>
+        <div class="clean-card fade-in" id="comments-container" style="position: relative; overflow: hidden; padding: 2rem;">
+            <div class="comments-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--input-border); margin-bottom: 1.5rem; padding-bottom: 0.5rem;">
+                <h2 style="border-bottom: none; margin-bottom: 0; padding-bottom: 0; color: var(--heading-color);">Comentarios</h2>
+                <button id="toggle-comments-btn" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
+                    Ver Comentarios &#10095;
+                </button>
+            </div>
+            
+            <div class="comments-slider" id="comments-slider" style="display: flex; width: 200%; transition: transform 0.4s ease-in-out;">
+                <!-- Panel 1: Formulario -->
+                <div class="comments-slide" style="width: 50%; padding-right: 2rem; box-sizing: border-box;">
+                    <form id="comment-form">
+                        <div class="input-group">
+                            <label for="comment-author">Nombre:</label>
+                            <input type="text" id="comment-author" class="animated-input" placeholder="Tu nombre..." required>
+                        </div>
+                        <div class="input-group">
+                            <label for="comment-text">Comentario:</label>
+                            <textarea id="comment-text" class="animated-input" rows="4" placeholder="Escribe tu comentario..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Enviar Comentario</button>
+                    </form>
                 </div>
-                <div class="input-group">
-                    <label for="comment-text">Comentario:</label>
-                    <textarea id="comment-text" class="animated-input" rows="4" placeholder="Escribe tu comentario..."
-                        required></textarea>
+                
+                <!-- Panel 2: Lista de Comentarios -->
+                <div class="comments-slide" style="width: 50%; padding-left: 2rem; box-sizing: border-box; max-height: 400px; overflow-y: auto;">
+                    <div id="comments-list"></div>
                 </div>
-                <button type="submit" class="btn-primary">Enviar Comentario</button>
-            </form>
-            <div id="comments-list"></div>
+            </div>
         </div>
     </section>
 

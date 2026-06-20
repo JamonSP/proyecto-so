@@ -4,6 +4,10 @@
 
     visitasRef.transaction((currentValue) => {
         return (currentValue || 0) + 1;
+    }, (error, committed, snapshot) => {
+        if (error) {
+            console.error("Firebase Error: No se pudo actualizar el contador. ¿Están las Reglas de Firebase en true?", error);
+        }
     });
 
     window.addEventListener('DOMContentLoaded', () => {
